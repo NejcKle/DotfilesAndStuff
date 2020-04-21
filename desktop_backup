@@ -1,0 +1,310 @@
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1585503816
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(0,43,54)'
+use-theme-colors=true
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+foreground-color='rgb(131,148,150)'
+audible-bell=false
+
+[org/gnome/terminal/legacy]
+schema-version=uint32 3
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-schedule-automatic=false
+night-light-enabled=true
+
+[org/gnome/settings-daemon/plugins/xsettings]
+overrides={'Gtk/ShellShowsAppMenu': <1>}
+hinting='slight'
+
+[org/gnome/settings-daemon/peripherals/keyboard]
+numlock-state='on'
+
+[org/gnome/settings-daemon/peripherals/mouse]
+locate-pointer=false
+
+[org/gnome/shell]
+app-picker-view=uint32 1
+enabled-extensions=['hidetopbar@mathieu.bidon.ca', 'hide-top-panel@dimka665.gmail.com']
+favorite-apps=['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop']
+enable-hot-corners=false
+
+[org/gnome/shell/extensions/dash-to-dock]
+show-apps-at-top=true
+dock-fixed=false
+dock-position='BOTTOM'
+dash-max-icon-size=36
+extend-height=false
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/plugins/filebrowser]
+virtual-root='file:///home/skobec/Desktop'
+tree-view=true
+root='file:///'
+
+[org/gnome/gedit/plugins]
+active-plugins=['spell', 'time', 'docinfo', 'filebrowser', 'modelines']
+
+[org/gnome/gedit/state/window]
+size=(900, 700)
+state=87168
+bottom-panel-size=140
+side-panel-size=200
+side-panel-active-page='GeditWindowDocumentsPanel'
+
+[org/gnome/calculator]
+target-currency=''
+show-zeroes=false
+source-currency=''
+show-thousands=false
+button-mode='advanced'
+target-units='radian'
+word-size=64
+window-position=(2240, 164)
+number-format='automatic'
+angle-units='degrees'
+base=8
+source-units='degree'
+accuracy=9
+
+[org/gnome/nautilus/preferences]
+search-view='list-view'
+default-folder-viewer='list-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+sidebar-width=196
+geometry='724x671+75+61'
+maximized=false
+
+[org/gnome/mines]
+window-width=1110
+mode=2
+use-animations=true
+window-is-maximized=false
+window-height=516
+
+[org/gnome/evince/default]
+window-ratio=(1.5873015873015872, 1.3000755857898716)
+
+[org/gnome/file-roller/listing]
+sort-method='name'
+name-column-width=250
+sort-type='ascending'
+list-mode='as-folder'
+show-path=false
+
+[org/gnome/file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
+[org/gnome/evolution-data-server]
+network-monitor-gio-name=''
+migrated=true
+
+[org/gnome/calendar]
+window-position=(67, 27)
+active-view='month'
+window-maximized=true
+window-size=(1533, 832)
+
+[org/gnome/deja-dup]
+backend='goa'
+prompt-check='2020-03-29T17:46:36.653834Z'
+
+[org/gnome/deja-dup/goa]
+type='google'
+
+[org/gnome/deja-dup/file]
+migrated=true
+
+[org/gnome/desktop/interface]
+clock-show-date=true
+show-battery-percentage=true
+gtk-im-module='gtk-im-context-simple'
+clock-show-seconds=false
+cursor-theme='DMZ-White'
+gtk-theme='Ambiance'
+icon-theme='ubuntu-mono-dark'
+
+[org/gnome/desktop/notifications]
+application-children=['update-manager', 'org-gnome-nautilus', 'org-gnome-software', 'firefox', 'slack', 'org-gnome-fileroller', 'org-gnome-tweaks', 'transmission-gtk', 'vlc-vlc']
+
+[org/gnome/desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/transmission-gtk]
+application-id='transmission-gtk.desktop'
+
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/vlc-vlc]
+application-id='vlc_vlc.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-fileroller]
+application-id='org.gnome.FileRoller.desktop'
+
+[org/gnome/desktop/notifications/application/slack]
+application-id='slack.desktop'
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'Sundry', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+translate=true
+categories=['X-GNOME-Utilities']
+apps=['org.gnome.baobab.desktop', 'deja-dup-preferences.desktop', 'eog.desktop', 'evince.desktop', 'org.gnome.FileRoller.desktop', 'gnome-calculator.desktop', 'gnome-dictionary.desktop', 'org.gnome.Characters.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Screenshot.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gnome-tweak-tool.desktop', 'gucharmap.desktop', 'seahorse.desktop', 'vinagre.desktop', 'yelp.desktop']
+name='X-GNOME-Utilities.directory'
+
+[org/gnome/desktop/app-folders/folders/Sundry]
+translate=true
+categories=['X-GNOME-Sundry']
+apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop', 'ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
+name='X-GNOME-Sundry.directory'
+
+[org/gnome/desktop/app-folders/folders/YaST]
+translate=true
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+
+[org/gnome/desktop/peripherals/touchpad]
+click-method='areas'
+
+[org/gnome/desktop/peripherals/mouse]
+left-handed=false
+
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
+[org/gnome/desktop/wm/preferences]
+button-layout=':appmenu,minimize,maximize,close'
+
+[org/gnome/desktop/wm/keybindings]
+switch-windows=['<Alt>Tab']
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-windows-backward=['<Shift><Alt>Tab']
+
+[org/gnome/desktop/background]
+draw-background=true
+picture-uri='file:///home/skobec/Firefox_wallpaper.png'
+primary-color='#02023c3c8888'
+picture-options='zoom'
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'si')]
+xkb-options=@as []
+
+[org/gnome/control-center]
+last-panel='sound'
+
+[org/gnome/rhythmbox/library/source]
+show-browser=true
+
+[org/gnome/rhythmbox/plugins/audioscrobbler/Last.fm]
+scrobbling-enabled=true
+
+[org/gnome/rhythmbox/plugins/audioscrobbler/Libre.fm]
+scrobbling-enabled=true
+
+[org/gnome/rhythmbox/plugins/iradio]
+initial-stations-loaded=true
+
+[org/gnome/rhythmbox/plugins/iradio/source]
+show-browser=true
+
+[org/gnome/rhythmbox/plugins]
+active-plugins=['android', 'notification', 'ipod', 'mpris', 'audiocd', 'generic-player', 'daap', 'mtpdevice', 'mmkeys', 'rb', 'alternative-toolbar', 'iradio', 'dbus-media-server', 'artsearch', 'audioscrobbler', 'power-manager']
+seen-plugins=['notification', 'grilo', 'ipod', 'rblirc', 'mpris', 'daap', 'mtpdevice', 'rb', 'alternative-toolbar', 'magnatune', 'soundcloud', 'im-status', 'webremote', 'lyrics', 'sendto', 'replaygain', 'dbus-media-server', 'artsearch', 'fmradio', 'audioscrobbler', 'pythonconsole']
+
+[org/gnome/rhythmbox/plugins/alternative_toolbar]
+expanders='{1: True, 2: True, 0: True, 3: False}'
+display-type=1
+show-source-toolbar=false
+
+[org/gnome/rhythmbox/player]
+volume=1.0
+
+[org/gnome/rhythmbox/podcast/source]
+show-browser=true
+
+[org/gnome/rhythmbox]
+position=(393, 187)
+statusbar-visible=false
+
+[org/gnome/rhythmbox/rhythmdb]
+locations=['file:///home/skobec/Music']
+
+[org/gnome/nm-applet/eap/cb081a6e-fa08-3c7a-88b1-0d0b07141d61]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
+[org/gnome/Totem]
+subtitle-encoding='UTF-8'
+active-plugins=['movie-properties', 'vimeo', 'variable-rate', 'screensaver', 'autoload-subtitles', 'media_player_keys', 'apple-trailers', 'screenshot', 'skipto', 'recent', 'save-file']
+
+[org/gnome/gnome-system-monitor]
+show-dependencies=false
+current-tab='processes'
+maximized=false
+window-state=(1170, 682, 298, 66)
+show-whose-processes='user'
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
+[org/gnome/gnome-system-monitor/proctree]
+columns-order=[0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+col-23-width=152
+sort-order=0
+col-23-visible=true
+sort-col=15
+
+[org/gnome/software]
+check-timestamp=int64 1586411804
+
+[org/gtk/settings/file-chooser]
+sort-column='name'
+sidebar-width=434
+window-position=(36, 0)
+show-size-column=true
+show-hidden=true
+window-size=(1203, 727)
+sort-directories-first=true
+date-format='regular'
+sort-order='ascending'
+location-mode='path-bar'
+
+[org/gtk/settings/color-chooser]
+selected-color=(true, 0.7686274509803922, 0.62745098039215685, 0.0, 1.0)
+
+[org/gtkpod]
+remembered-plugins=''
+
+[apps/update-manager]
+first-run=false
+launch-time=int64 1585939106
+launch-count=4
+
+[ca/desrt/dconf-editor]
+saved-view='/org/gnome/shell/'
+show-warning=false
+window-height=600
+window-width=800
+window-is-maximized=false
