@@ -1,12 +1,39 @@
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1585503816
+release-check-time=uint32 1587481191
+
+[system/locale]
+region='en_GB.UTF-8'
+
+[:0]
+default-size-columns=150
+
+[org/gnome/terminal/legacy/profiles:/:18584234-225f-4275-bdd4-3088fa20ad33]
+foreground-color='#EFEFF0F0EBEB'
+visible-name='Snazzy'
+palette=['#28282A2A3636', '#FFFF5C5C5757', '#5A5AF7F78E8E', '#F3F3F9F99D9D', '#5757C7C7FFFF', '#FFFF6A6AC1C1', '#9A9AEDEDFEFE', '#F1F1F1F1F0F0', '#686868686868', '#FFFF5C5C5757', '#5A5AF7F78E8E', '#F3F3F9F99D9D', '#5757C7C7FFFF', '#FFFF6A6AC1C1', '#9A9AEDEDFEFE', '#EFEFF0F0EBEB']
+use-system-font=false
+highlight-colors-set=true
+use-theme-colors=false
+use-theme-transparency=false
+allow-bold=true
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#EFEFF0F0EBEB'
+background-color='#28282A2A3636'
+highlight-background-color='#'
+highlight-foreground-color='#'
+
+[org/gnome/terminal/legacy/profiles:]
+list=['18584234-225f-4275-bdd4-3088fa20ad33']
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 background-color='rgb(0,43,54)'
 use-theme-colors=true
 palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
 foreground-color='rgb(131,148,150)'
+use-system-font=false
 audible-bell=false
+font='Monospace 12'
 
 [org/gnome/terminal/legacy]
 schema-version=uint32 3
@@ -78,7 +105,7 @@ search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
 sidebar-width=196
-geometry='724x671+75+61'
+geometry='724x670+1628+55'
 maximized=false
 
 [org/gnome/mines]
@@ -103,15 +130,15 @@ sidebar-width=200
 window-height=480
 window-width=600
 
-[org/gnome/evolution-data-server]
-network-monitor-gio-name=''
-migrated=true
-
 [org/gnome/calendar]
 window-position=(67, 27)
 active-view='month'
 window-maximized=true
 window-size=(1533, 832)
+
+[org/gnome/evolution-data-server]
+network-monitor-gio-name=''
+migrated=true
 
 [org/gnome/deja-dup]
 backend='goa'
@@ -129,8 +156,8 @@ show-battery-percentage=true
 gtk-im-module='gtk-im-context-simple'
 clock-show-seconds=false
 cursor-theme='DMZ-White'
-gtk-theme='Ambiance'
-icon-theme='ubuntu-mono-dark'
+gtk-theme='Numix'
+icon-theme='Numix-Square'
 
 [org/gnome/desktop/notifications]
 application-children=['update-manager', 'org-gnome-nautilus', 'org-gnome-software', 'firefox', 'slack', 'org-gnome-fileroller', 'org-gnome-tweaks', 'transmission-gtk', 'vlc-vlc']
@@ -147,17 +174,20 @@ application-id='firefox.desktop'
 [org/gnome/desktop/notifications/application/transmission-gtk]
 application-id='transmission-gtk.desktop'
 
-[org/gnome/desktop/notifications/application/update-manager]
-application-id='update-manager.desktop'
-
 [org/gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
 
 [org/gnome/desktop/notifications/application/vlc-vlc]
 application-id='vlc_vlc.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
+
+[org/gnome/desktop/notifications/application/thunderbird]
+application-id='thunderbird.desktop'
 
 [org/gnome/desktop/notifications/application/slack]
 application-id='slack.desktop'
@@ -182,6 +212,13 @@ translate=true
 categories=['X-SuSE-YaST']
 name='suse-yast.directory'
 
+[org/gnome/desktop/screensaver]
+picture-uri='file:///home/skobec/Pictures/wallpaperflare.com_wallpaper(3).jpg'
+color-shading-type='solid'
+primary-color='#000000000000'
+picture-options='zoom'
+secondary-color='#000000000000'
+
 [org/gnome/desktop/peripherals/touchpad]
 click-method='areas'
 
@@ -202,16 +239,29 @@ switch-windows-backward=['<Shift><Alt>Tab']
 
 [org/gnome/desktop/background]
 draw-background=true
-picture-uri='file:///home/skobec/Firefox_wallpaper.png'
-primary-color='#02023c3c8888'
+picture-uri='file:///home/skobec/Pictures/Wallpapers/wallpaperflare.com_wallpaper(3).jpg'
+color-shading-type='solid'
+primary-color='#000000'
 picture-options='zoom'
+secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'si')]
+mru-sources=[('xkb', 'si'), ('xkb', 'si+us')]
 xkb-options=@as []
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='background'
+
+[org/gnome/libgnomekbd/preview]
+width=1464
+height=616
+x=136
+y=135
+
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
 
 [org/gnome/rhythmbox/library/source]
 show-browser=true

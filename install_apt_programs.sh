@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo add-apt-repository ppa:numix/ppa
 sudo apt update && sudo apt full-upgrade -y
 
 function install {
@@ -36,6 +37,14 @@ install dconf-cli
 install uuid-runtime
 install gnome-shell-extensions       
 install neofetch       
+install zsh       
+
+# Desktop theme
+install arc-theme
+install numix-icon-theme-circle
+install numix-icon-theme-square
+
+
 
 # Fun stuff
 install figlet

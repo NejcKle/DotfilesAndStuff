@@ -38,7 +38,13 @@ linkDotfile .minirc.dfl
 linkDotfile .zshrc
 linkDotfile antigen.zsh
 
+vim +PlugInstall +qall
+
 # Update the shell, restart of computer is needed afterwards
 chsh -s $(which zsh)
 
-bash -c  "$(wget -qO- https://git.io/vQgMr)"
+#Will install gogh theme
+bash -c  "$(wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh)"
+
+# message
+figlet "RESTART MACHINE!" | /usr/games/lolcat
