@@ -38,6 +38,7 @@ install uuid-runtime
 install gnome-shell-extensions       
 install neofetch       
 install zsh       
+install exuberant-ctags
 
 # Desktop theme
 install arc-theme
