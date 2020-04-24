@@ -39,6 +39,7 @@ install gnome-shell-extensions
 install neofetch       
 install zsh       
 install exuberant-ctags
+install putty
 
 # Desktop theme
 install arc-theme

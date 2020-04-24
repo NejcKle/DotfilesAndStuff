@@ -26,9 +26,10 @@ call plug#end()
 
     
 " Visual, colorscheme settings
-colorscheme snazzy 
-"let g:solarized_termcolors=256
-set background=dark            "You can set it to dark
+"colorscheme snazzy 
+colorscheme solarized 
+let g:solarized_termcolors=256
+set background=light            "You can set it to dark
 
 
 " Tons of editor settings, that accumulated over time
@@ -65,7 +66,10 @@ set fileencoding=utf-8          " For special slovenian characters"
 set scrolloff=5                 " This is amazing, cursor won't go to 
                                 " the end of the screen when scrolling
 set updatetime=100              " Needed for gitgutter plugin
-
+set laststatus=2
+hi clear SpellBad
+hi SpellBad cterm=underline
+hi SpellBad ctermfg=1
 " For Vim + latex
 let g:vimtex_view_method = 'mupdf'
 
@@ -78,7 +82,7 @@ let g:vimtex_view_method = 'mupdf'
 "nnoremap <C-L> <C-W><C-L>
 "nnoremap <C-H> <C-W><C-H>
 
-:set tags=./tags,tags          "Used to tell where tags are located
+:set tags=./tags,tags,../../tags          "Used to tell where tags are located
 nnoremap ii g<C-]>              "Jump IN a tag
 nnoremap oo <C-t>               "Jump OUT of a tag
 
@@ -98,7 +102,8 @@ map <C-c> :NERDTreeToggle<CR>
 
 " Used for running python from VIM
 filetype on
-autocmd FileType python nnoremap <buffer> <C-Y> :wa \| exec '!python3' shellescape(@%, 1)<cr>
+"autocmd FileType python nnoremap <buffer> <C-Y> :wa \| exec '!python3' shellescape(@%, 1)<cr>
+nnoremap <silent> <C-Y> :wa \| exe "!tmux send -t 1 'python3 nav_sender.py' Enter"<CR> 
 
 " Use alt+d for arduino compile and flash
 " nnoremap <silent> <C-d> :wa \| !arduino-cli compile --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z main.ino && arduino-cli upload --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z -p COM11 -i main.ino.TleraCorp.stm32l0.IRNAS-env-module-L072Z.dfu <CR>
