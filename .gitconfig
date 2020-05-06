@@ -1,3 +1,8 @@
 [user]
 	email = marko.sagadin42@gmail.com
 	name = Marko Sagadin
+[credential]
+	helper = store
+[alias]
+    plog = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+    commmit = commit

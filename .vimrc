@@ -16,20 +16,21 @@ Plug 'scrooloose/nerdtree'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'sudar/vim-arduino-syntax'
 Plug 'SirVer/ultisnips'
-Plug 'sudar/vim-arduino-snippets'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'connorholyday/vim-snazzy'
 Plug 'chaoren/vim-wordmotion'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
     
 " Visual, colorscheme settings
-"colorscheme snazzy 
-colorscheme solarized 
+colorscheme snazzy 
+"colorscheme solarized 
 let g:solarized_termcolors=256
-set background=light            "You can set it to dark
+set background=dark            "You can set it to dark
 
 
 " Tons of editor settings, that accumulated over time
@@ -103,7 +104,7 @@ map <C-c> :NERDTreeToggle<CR>
 " Used for running python from VIM
 filetype on
 "autocmd FileType python nnoremap <buffer> <C-Y> :wa \| exec '!python3' shellescape(@%, 1)<cr>
-nnoremap <silent> <C-Y> :wa \| exe "!tmux send -t 1 'python3 nav_sender.py' Enter"<CR> 
+autocmd FileType python nnoremap <silent> <C-Y> :wa \| exe "!tmux send -t 1 'python3 yolo_tflite.py' Enter"<CR> 
 
 " Use alt+d for arduino compile and flash
 " nnoremap <silent> <C-d> :wa \| !arduino-cli compile --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z main.ino && arduino-cli upload --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z -p COM11 -i main.ino.TleraCorp.stm32l0.IRNAS-env-module-L072Z.dfu <CR>
@@ -119,5 +120,5 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Very magical command, with ctrl + D i can now send command to other tmux
 " panel 
-nnoremap <silent> <C-d> :exe "!tmux send -t 1 'cargo run' Enter"<CR> 
+nnoremap <silent> <C-d> :wa \| exe "!tmux send -t 1 'make test' Enter"<CR> 
 
