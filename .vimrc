@@ -23,6 +23,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'chaoren/vim-wordmotion'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'junegunn/goyo.vim'
+Plug 'rhysd/vim-grammarous'
 call plug#end()
 
     
@@ -71,8 +72,9 @@ set laststatus=2
 hi clear SpellBad
 hi SpellBad cterm=underline
 hi SpellBad ctermfg=1
+
 " For Vim + latex
-let g:vimtex_view_method = 'mupdf'
+let g:vimtex_view_method = 'zathura'
 
 " Key mappings
 
@@ -104,7 +106,7 @@ map <C-c> :NERDTreeToggle<CR>
 " Used for running python from VIM
 filetype on
 "autocmd FileType python nnoremap <buffer> <C-Y> :wa \| exec '!python3' shellescape(@%, 1)<cr>
-autocmd FileType python nnoremap <silent> <C-Y> :wa \| exe "!tmux send -t 1 'python3 yolo_tflite.py' Enter"<CR> 
+autocmd FileType python nnoremap <silent> <C-Y> :wa \| exe "!tmux send -t 1 'python3 plot_spectrum.py' Enter"<CR> 
 
 " Use alt+d for arduino compile and flash
 " nnoremap <silent> <C-d> :wa \| !arduino-cli compile --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z main.ino && arduino-cli upload --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z -p COM11 -i main.ino.TleraCorp.stm32l0.IRNAS-env-module-L072Z.dfu <CR>

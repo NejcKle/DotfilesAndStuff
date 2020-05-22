@@ -41,6 +41,11 @@ install zsh
 install exuberant-ctags
 install putty
 
+# For latex
+install zathura
+install latexmk
+install xdotool
+
 # Desktop theme
 install arc-theme
 install numix-icon-theme-circle
