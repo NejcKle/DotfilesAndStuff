@@ -24,14 +24,15 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'junegunn/goyo.vim'
 Plug 'rhysd/vim-grammarous'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
     
 " Visual, colorscheme settings
-colorscheme snazzy 
-"colorscheme solarized 
+"colorscheme snazzy 
+colorscheme solarized 
 let g:solarized_termcolors=256
-set background=dark            "You can set it to dark
+set background=light            "You can set it to dark
 
 
 " Tons of editor settings, that accumulated over time
@@ -69,13 +70,22 @@ set scrolloff=5                 " This is amazing, cursor won't go to
                                 " the end of the screen when scrolling
 set updatetime=100              " Needed for gitgutter plugin
 set laststatus=2
+set incsearch                   " Find the next match as we type the search
+set hlsearch                    " Highlight searches by default
+set ignorecase                  " Ignore case when searching...
+set smartcase                   " ...unless we type a capital
+
+
+
+
 hi clear SpellBad
 hi SpellBad cterm=underline
 hi SpellBad ctermfg=1
 
 " For Vim + latex
 let g:vimtex_view_method = 'zathura'
-
+" For Git Gutter
+let g:gitgutter_max_signs = 2000
 " Key mappings
 
 " split navigations, they are not needed anymore cause of
@@ -100,16 +110,24 @@ nnoremap ^ <nop>
 " jk is escape
 inoremap jk 
 
+"Usefull shortcut to move between buffers
+nnoremap gb :ls<CR>:b<Space>
+
 " Open NerdTree with control + c
 map <C-c> :NERDTreeToggle<CR>
 
 " Used for running python from VIM
 filetype on
 "autocmd FileType python nnoremap <buffer> <C-Y> :wa \| exec '!python3' shellescape(@%, 1)<cr>
-autocmd FileType python nnoremap <silent> <C-Y> :wa \| exe "!tmux send -t 1 'python3 plot_spectrum.py' Enter"<CR> 
+autocmd FileType python nnoremap <silent> <C-Y> :wa \| exe "!tmux send -t 1 'python3 main.py -p /dev/ttyUSB0' Enter"<CR> 
 
-" Use alt+d for arduino compile and flash
-" nnoremap <silent> <C-d> :wa \| !arduino-cli compile --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z main.ino && arduino-cli upload --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z -p COM11 -i main.ino.TleraCorp.stm32l0.IRNAS-env-module-L072Z.dfu <CR>
+" Use alt+d for arduino compile and flash, first line is for tmux version,
+" second is for without it
+nnoremap <silent> <C-d> :wa \| exe "!tmux send -t 1 'arduino-cli compile --fqbn IRNAS:stm32l0:IRNAS-env-module-L072Z *.ino && arduino-cli upload --fqbn IRNAS:stm32l0:IRNAS-env-module-L072Z -p /dev/ttyACM1 -i *.dfu' Enter"<CR> 
+"nnoremap <silent> <C-d> :wa \| exe "!tmux send -t 1 'arduino-cli compile --fqbn arduino:samd:mkrgsm1400 *.ino && arduino-cli upload --fqbn arduino:samd:mkrgsm1400 -p /dev/ttyACM0 -i *.bin' Enter"<CR> 
+nnoremap <silent> <C-m> :wa \| exe "!tmux send -t 2 'minicom' Enter"<CR> 
+
+"nnoremap <silent> <C-d> :wa \| !arduino-cli compile --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z main.ino && arduino-cli upload --fqbn TleraCorp:stm32l0:IRNAS-env-module-L072Z -p COM11 -i main.ino.TleraCorp.stm32l0.IRNAS-env-module-L072Z.dfu <CR>
 "nnoremap <silent> <C-d> :wa \| !arduino-cli compile --fqbn esp32:esp32:featheresp32 main.ino && arduino-cli upload --fqbn esp32:esp32:featheresp32 -p COM27 -i main.ino.esp32.esp32.featheresp32 <CR>
 
 " Used for ulti snippets
@@ -122,5 +140,8 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Very magical command, with ctrl + D i can now send command to other tmux
 " panel 
-nnoremap <silent> <C-d> :wa \| exe "!tmux send -t 1 'make test' Enter"<CR> 
+"nnoremap <silent> <C-d> :wa \| exe "!tmux send -t 1 'make test' Enter"<CR> 
 
+" Disable arrow movement, resize splits instead.
+nnoremap <Left>  :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>

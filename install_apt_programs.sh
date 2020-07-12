@@ -18,6 +18,7 @@ function install {
 install curl
 install git
 install tmux
+install xclip # So we can paste from tmux buffer into system clipboard
 install tree
 install vim-gtk #gtk version, so we can paste nicely to system cliboard
 install make
