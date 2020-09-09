@@ -1,0 +1,28 @@
+snippet co "Creates an empty comment block"
+/*!
+ * @brief 
+ *
+ * @param[in] 
+ * @param[in]
+ *
+ * @return 
+ *
+ * @note 
+ */
+endsnippet
+
+snippet inc "Creates and include preprocessor line"
+#include "$1.h"
+endsnippet
+
+snippet once "Creates include bracket guards" 
+#ifndef $1_H
+#define $1_H
+#endif /* $1_H */
+/*** end of file ***/
+endsnippet
+
+snippet todo "Creates todo line with date"
+// TODO: ${1:description} `!v strftime("%c")`
+endsnippet
+

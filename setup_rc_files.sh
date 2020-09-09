@@ -36,6 +36,7 @@ linkDotfile .gitconfig
 linkDotfile .tmux.conf
 linkDotfile .minirc.dfl
 linkDotfile .zshrc
+linkDotfile .ssh
 linkDotfile antigen.zsh
 
 vim +PlugInstall +qall

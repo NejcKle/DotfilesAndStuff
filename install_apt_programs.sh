@@ -22,6 +22,7 @@ install xclip # So we can paste from tmux buffer into system clipboard
 install tree
 install vim-gtk #gtk version, so we can paste nicely to system cliboard
 install make
+install cmake
 install gcc
 install g++
 install unzip
@@ -30,29 +31,46 @@ install wget
 install openocd
 install gdb-multiarch
 install gcc-arm-none-eabi
-install cmake
 install minicom
 install python3
+install python3-pip
 install dconf-editor
 install dconf-cli 
 install uuid-runtime
 install gnome-shell-extensions       
+install gnome-tweak-tool
 install neofetch       
 install zsh       
 install exuberant-ctags
-install putty
+install broadcom-sta-dkms
+install bison
+install filezilla
+install htop
+install spotify-client
+install ccache
+install dfu-util
 
 # For latex
 install zathura
-install latexmk
 install xdotool
+install latexmk
+install texlive-latex-extra
+
 
 # Desktop theme
 install arc-theme
 install numix-icon-theme-circle
 install numix-icon-theme-square
+install papirus-icon-theme
 
-
+# Zephyr stuff
+install ninja-build
+install gperf
+install python3-setuptools
+install python3-wheel
+install xz-utils
+install file
+install gcc-multilib
 
 # Fun stuff
 install figlet

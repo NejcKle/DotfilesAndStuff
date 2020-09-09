@@ -17,12 +17,13 @@ antigen apply
 
 
 # aliases
-alias ll='ls -l --color=auto'
-alias ls='ls --color=auto'
+alias ll='ls -aFl --color=auto --group-directories-first'
+alias ls='ls --color=auto --group-directories-first'
 alias ml='minicom'
 
 PATH="/home/skobec/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PATH="/home/skobec//bin${PATH:+:${PATH}}"; export PATH;
+PATH="/opt/gnuarmemb/gcc-arm-none-eabi-9-2020-q2-update/bin${PATH:+:${PATH}}"; export PATH
 PERL5LIB="/home/skobec/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/skobec/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/skobec/perl5\""; export PERL_MB_OPT;
@@ -46,8 +47,18 @@ function gitup() {
 
 # tmux setup
 alias tmuxx="tmux new-session \; \
-            split-window -h -p 25 \; \
+            split-window -h -p 28 \; \
             select-pane -t 1 \; \
             send-keys 'clear' C-m\; \
             select-pane -t 0 \; \
             attach"
+export PATH=~/.local/bin:"$PATH"
+
+# NRF Zephyr 
+export ZEPHYR_BASE="/home/skobec/Programs/ncs/zephyr"
+export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+export GNUARMEMB_TOOLCHAIN_PATH="/opt/gnuarmemb/gcc-arm-none-eabi-9-2020-q2-update"
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+alias workz="workon zephyenv"
